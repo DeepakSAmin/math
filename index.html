@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sets</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #030669, #2d0166);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* preloader */
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #f8f8f8, #8ecae6);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .code-loader {
+            color: #120658;
+            font-family: Consolas, Menlo, Monaco, monospace;
+            font-weight: bold;
+            font-size: 100px;
+            opacity: 0.8;
+        }
+
+
+        .code-loader span {
+            display: inline-block;
+            animation: pulse_414 3s alternate infinite ease-in-out;
+        }
+
+        .code-loader span:nth-child(odd) {
+            animation-delay: 1.5s;
+            /* Half of the total animation duration */
+        }
+
+        @keyframes pulse_414 {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+        }
+
+        /* Additional CSS styles */
+        header {
+            background: linear-gradient(to bottom, #f8f8f8, #8ecae6);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 1rem;
+        }
+
+        .logo-right>img {
+            /* margin-left: -10rem; */
+            border-radius: 50%;
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
+        .text {
+            color: #ffff;
+            text-shadow: -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+
+        }
+        .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.button {
+    padding: 1rem 2rem;
+    background-color: #2f8be0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.button:hover {
+    background-color: #1a057e;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #2f8be0;
+    }
+    100% {
+        box-shadow: 0 0 20px #2f8be0;
+    }
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #0051ff;
+    padding: 1rem;
+    color: #fff;
+}
+
+        /* CSS styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+
+        .unique-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #2f8be0;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  margin-left: 7px;
+}
+
+.unique-button .text {
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.unique-button svg path {
+  transition: 400ms;
+}
+
+.unique-button:hover {
+  background-color: transparent;
+}
+
+.unique-button:hover .text {
+  color: #181717;
+}
+
+.unique-button:hover svg path {
+  fill: #181717;
+}
+    </style>
+</head>
+
+<body>
+
+    
+    <!-- Add your content here -->
+    <br><br><br>
+    <center>
+        <div class="text">
+            <h1>LOGICAL SET & VENN DIAGRAM GENERATOR</h1>
+        </div>
+        <a
+            href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=FFFFFF&background=316ff5&center=true&vCenter=true&width=700&height=25&lines=Introducing+our+Logical+Set+%26+Venn+Diagram+Generator!+;Easily+create+Venn+diagrams+and+explore+set+operations+for+2+or+3+sets.;Find+unions%2C+differences%2C+intersections%2C+complements%2C+and+more.;Visualize+set+relationships+and+uncover+unique+elements+with+ease.+;Try+it+now!" alt="Typing SVG" /></a>
+    </center>
+    <br><br><br>
+
+    <div class="button-container">
+        <a href="output1.html" class="button">2 Sets</a>
+        <a href="output2.html" class="button">3 Sets</a>
+           </a>          
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+    <!-- Pang alert HTML structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        </div>
+    </div>
+</body>
+<script>
+    // Get the modal element
+    var modal = document.getElementById("myModal");
+
+    // Get the close button element
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    // Show the modal
+    modal.style.display = "block";
+
+    // Close the modal when the close button is clicked
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when the user clicks outside the modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+// preloader
+//window.addEventListener('load', function() {
+  //var preloader = document.querySelector('.preloader');
+  //setTimeout(function() {
+    //preloader.style.display = 'none';
+  //}, 2000); // Set the timeout duration to 3000 milliseconds (3 seconds)
+});
+
+
+</script>
+
+</html>
